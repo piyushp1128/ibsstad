@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Border Surveillance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Intelligent Border Surveillance System for Threat Automated Detection</h1>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Section - Camera Feed -->
+        <div class="left-section">
+            <div class="video-container">
+                <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+            </div>
+        </div>
+
+        <!-- Right Section - Info and Download -->
+        <div class="right-section">
+            <div class="download-section">
+                <p class="download-text">Click below to download the detected location and time details.</p>
+                <a href="{{ url_for('download_report') }}" class="btn">Download Detection Report</a>
+            </div>
+
+            <div class="info-section">
+                <p><strong>Live Time:</strong> <span id="live-time">--:--:--</span></p>
+                <p><strong>Location:</strong> <span id="live-location">Fetching...</span></p>
+                <p id="placeholder-text">hello</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
