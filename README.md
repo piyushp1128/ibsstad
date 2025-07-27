@@ -1,4 +1,5 @@
-# ibsstad
+# SecureSight
+
 Defense sector project :- Intelligent Border Surveillance System for Threat Automated  Detection 
 
 A real-time object detection system for restricted zones using YOLOv8. It detects unauthorized human or vehicle presence via 
